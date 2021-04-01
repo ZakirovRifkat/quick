@@ -11,7 +11,6 @@ void quicksort(int *arr,int first,int last)
         return;
     int p_ind = first + abs(last-first) / 2;
     int piv = arr[p_ind];
-    printf("опорный элемент: %d\n", piv);
 
     int i = first, j = last;
 
@@ -71,20 +70,20 @@ int main()
 
 
         int  *arr, n, i;
-        printf("Кол-во элементов в массиве:\n");
+        printf("ГЉГ®Г«-ГўГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Гў Г¬Г Г±Г±ГЁГўГҐ:\n");
         scanf("%d", &n);
         int first = 0, last = n-1;
         arr = (int*) malloc(n*sizeof(int));
-        printf("Элементы массива\n");
+        printf("ГќГ«ГҐГ¬ГҐГ­ГІГ» Г¬Г Г±Г±ГЁГўГ \n");
         for (i=0; i<n; i++)
             scanf("%d", &arr[i]);
         quicksort(arr, first, last) ;
-        printf("\nОтсортированный массив:\n");
+        printf("\nГЋГІГ±Г®Г°ГІГЁГ°Г®ГўГ Г­Г­Г»Г© Г¬Г Г±Г±ГЁГў:\n");
         for(i=0; i<n; i++)
             printf("%d  ", arr[i]);
-        printf("\nКоличество перестановок: ");
+        printf("\nГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЇГҐГ°ГҐГ±ГІГ Г­Г®ГўГ®ГЄ: ");
         printf("%d\n",perest);
-        printf("Количество сравнений: ");
+        printf("ГЉГ®Г«ГЁГ·ГҐГ±ГІГўГ® Г±Г°Г ГўГ­ГҐГ­ГЁГ©: ");
         printf("%d\n", sravn);
         sravn = 0;
         perest = 0;
